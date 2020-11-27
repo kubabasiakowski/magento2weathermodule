@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MagentoTask_WeatherModule::weather" title="Weather" module="MagentoTask_WeatherModule" sortOrder="20" action="magentotask_weathermodule/weather/index" resource="MagentoTask_WeatherModule::weather"/>
+    </menu>
+</config>
