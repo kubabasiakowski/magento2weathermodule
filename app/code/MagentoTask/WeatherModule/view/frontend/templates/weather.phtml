@@ -2,5 +2,10 @@
 <h1>Hello</h1>
 
 <div>
-	<?php echo $block->currentWeather(); ?>
+	<?php 
+		//echo $block->currentWeather();
+
+		echo 'Pogoda w Lublinie<br>';
+		echo 'Temperatura: ' . $block->getWeatherItems()->getData('temp') . 'K</br>Opis: ' . $block->getWeatherItems()->getData('description') . '</br>Data: ' . $block->getWeatherItems()->getData('created_at');
+	?>
 </div>

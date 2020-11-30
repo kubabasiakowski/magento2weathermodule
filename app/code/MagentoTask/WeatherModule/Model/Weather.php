@@ -13,6 +13,8 @@ class Weather extends \Magento\Framework\Model\AbstractModel implements \Magento
 	const DESCRIPTION = "desc";
 	const TEMP_MIN = "tempmin";
 	const TEMP_MAX = "tempmax";
+    const CREATED_AT = "createdat";
+    const UPDATE_TIME = "updatetime";
 
 
 	protected function _construct()
@@ -64,12 +66,12 @@ class Weather extends \Magento\Framework\Model\AbstractModel implements \Magento
 
     public function getDescription()
     {
-        return $this->getData(self::Description);
+        return $this->getData(self::DESCRIPTION);
     }
 
     public function setDescription($Description)
     {
-        return $this->setData(self::Description, $Description);
+        return $this->setData(self::DESCRIPTION, $Description);
     }
 
 

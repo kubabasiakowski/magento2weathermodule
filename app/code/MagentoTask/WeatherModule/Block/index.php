@@ -28,4 +28,17 @@ class Index extends \Magento\Framework\View\Element\Template {
 
 
 	}
+
+	public function getWeatherItems()
+    {
+        $collectionItems = $this->getWeatherCollection();
+
+       return $collectionItems;
+    }
+
+	public function getWeatherCollection(){
+		$weather = $this->_weatherFactory->getCollection()->getLastItem();
+		return $weather;
+	}
+
 }
