@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MagentoTask\WeatherModule\Block;
 
 class Index extends \Magento\Framework\View\Element\Template {
@@ -15,16 +17,10 @@ class Index extends \Magento\Framework\View\Element\Template {
 		parent::__construct($context);
     }
 
-	public function getWeatherItems()
+	public function getWeatherItems() : object
     {
-        $collectionItems = $this->getWeatherCollection();
-
-       return $collectionItems;
-    }
-
-	public function getWeatherCollection(){
-		$weather = $this->_weatherFactory->getCollection()->getLastItem();
+        $weather = $this->_weatherFactory->getCollection()->getLastItem();
 		return $weather;
-	}
+    }
 
 }

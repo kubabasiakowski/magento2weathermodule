@@ -23,7 +23,7 @@ class Index extends Action
 		return parent::__construct($context);
 	}
 
-	public function execute()
+	public function execute() 
 	{
 		$api_key = "7728d767a3017544ca1728e0798e94d6";
 		$city_id = "765876";

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MagentoTask\WeatherModule\Model;
 class Weather extends \Magento\Framework\Model\AbstractModel implements \Magento\Framework\DataObject\IdentityInterface
 {
@@ -27,71 +29,71 @@ class Weather extends \Magento\Framework\Model\AbstractModel implements \Magento
 		return [self::CACHE_TAG . '_' . $this->getId()];
 	}
 
-	public function getDefaultValues()
+	public function getDefaultValues() : array
 	{
 		$values = [];
 
 		return $values;
 	}
 
-	public function getTemp()
+	public function getTemp() : float
     {
         return $this->getData(self::TEMP);
     }
 
-    public function setTemp($temp)
+    public function setTemp(float $temp) : Weather
     {
         return $this->setData(self::TEMP, $temp);
     }
 
-    public function getTempMin()
+    public function getTempMin() : float
     {
         return $this->getData(self::TEMP_MIN);
     }
 
-    public function setTempMin($TEMP_MIN)
+    public function setTempMin(float $TEMP_MIN) : Weather
     {
         return $this->setData(self::TEMP_MIN, $TEMP_MIN);
     }
 
-    public function getTempMax()
+    public function getTempMax() : float
     {
         return $this->getData(self::TEMP_MAX);
     }
 
-    public function setTempMax($TEMP_MAX)
+    public function setTempMax(float $TEMP_MAX) : Weather
     {
         return $this->setData(self::TEMP_MAX, $TEMP_MAX);
     }
 
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->getData(self::DESCRIPTION);
     }
 
-    public function setDescription($Description)
+    public function setDescription(string $Description) : Weather
     {
         return $this->setData(self::DESCRIPTION, $Description);
     }
 
 
 
-        public function getUpdateTime()
+        public function getUpdateTime() : string
     {
         return $this->getData(self::UPDATE_TIME);
     }
 
-    public function setUpdateTime($updateTime)
+    public function setUpdateTime(string $updateTime) : Weather
     {
         return $this->setData(self::UPDATE_TIME, $updateTime);
     }
 
-    public function getCreatedAt()
+    public function getCreatedAt() : string
     {
         return $this->getData(self::CREATED_AT);
     }
 
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(string $createdAt) : Weather
     {
         return $this->setData(self::CREATED_AT, $createdAt);
     }

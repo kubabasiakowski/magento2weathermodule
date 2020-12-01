@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MagentoTask\WeatherModule\Cron;
 
 class AddWeather
@@ -11,7 +13,7 @@ class AddWeather
 		$this->_weatherFactory = $weatherFactory;
 	}
 
-	public function execute()
+	public function execute() : void
 	{
 		$api_key = "7728d767a3017544ca1728e0798e94d6";
 		$city_id = "765876";
